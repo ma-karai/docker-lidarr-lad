@@ -51,9 +51,9 @@ RUN \
 	echo "0 0 1 * *   root   rm \"/config/scripts/download.log\""  >> "/etc/crontab" && \
 	echo "0 0 1 * *   root   rm \"/config/scripts/notfound.log\""  >> "/etc/crontab" && \
 	echo "************ download deezloader ************" && \
-	wget https://notabug.org/RemixDevs/DeezloaderRemix/archive/development.zip && \
-	unzip development.zip && \
-	rm development.zip && \
+	wget https://notabug.org/RemixDevs/DeezloaderRemix/archive/master.zip && \
+	unzip master.zip && \
+	rm master.zip && \
 	echo "************ customize deezloader ************" && \
 	sed -i "s/\"trackNameTemplate\": \"%artist% - %title%\"/\"trackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "/deezloaderremix/app/default.json" && \
 	sed -i "s/\"albumTrackNameTemplate\": \"%number% - %title%\"/\"albumTrackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "/deezloaderremix/app/default.json" && \
